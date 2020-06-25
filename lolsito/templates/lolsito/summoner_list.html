@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Summoners</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Summoner name</td>
+                <td>Summoner id</td>
+                <td>Summoner created on</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for summoner in summoners %}
+                <tr>
+                    <td>
+                        {{ summoner.summoner_name }}
+                    </td>
+                    <td>
+                        {{ summoner.summoner_id }}
+                    </td>
+                    <td>
+                        {{ summoner.created_date }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
